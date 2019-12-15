@@ -1,0 +1,6 @@
+# Android fstab file.
+# TODO: Fill out correct form.
+# You have to check whether device supports A/B update or not.
+
+#<src>                                                               <mnt_point>            <type>   <mnt_flags and options>                                                 <fs_mgr_flags>
+/dev/block/bootdevice/by-name/OP                                     /product/OP             ext4    ro,noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,context=u:object_r:system_file:s0    wait,slotselect

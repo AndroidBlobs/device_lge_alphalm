@@ -1,0 +1,15 @@
+# alphalm_lao_com vendor init rc
+
+on post-fs-data
+# NFC: create data/nfc for nv storage
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    # CAMERA: create tof for calibration data
+    mkdir /mnt/vendor/persist-lg/tof 0776 system camera
+
+# IMEI_Protection start
+# Add ipd service
+service vendor.ipd /vendor/bin/ipd
+    class main
+    user system
+    group radio system net_raw
+# IMEI_Protection end
